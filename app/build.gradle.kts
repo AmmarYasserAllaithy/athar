@@ -57,6 +57,9 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.core)
+
     // Navigation
     implementation(libs.androidx.navigation.compose)
 
