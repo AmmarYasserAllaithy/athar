@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">أثر</string>
+
     <string name="splash_message_line_1">مـسـاحـتـك الـهـادئـة</string>
     <string name="splash_message_line_2">لـتـدويـن الـخـواطـر والأفـكـار</string>
+    <string name="force_update_title">تحديث مطلوب</string>
+    <string name="force_update_subtitle">يرجى تحديث التطبيق للاستمرار</string>
+    <string name="force_update_button_label">تحديث الآن</string>
+
 </resources>

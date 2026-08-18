@@ -10,6 +10,12 @@ sealed interface NavRoute {
     object SplashRoute : NavRoute
 
     @Serializable
+    data class ForceUpdateRoute(
+        val title: String? = null,
+        val subtitle: String? = null,
+    ) : NavRoute
+
+    @Serializable
     object MainRoute : NavRoute
 
 }

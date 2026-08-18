@@ -7,6 +7,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.ammaryasser.athar.presentation.screen.SplashScreen
+import androidx.navigation.toRoute
+import com.ammaryasser.athar.presentation.screen.forceupdate.ForceUpdateScreen
 
 
 @Composable
@@ -28,6 +30,15 @@ fun AppNavHost(
                     }
                 }
             }
+        }
+
+        composable<NavRoute.ForceUpdateRoute> { backStackEntry ->
+            val route = backStackEntry.toRoute<NavRoute.ForceUpdateRoute>()
+
+            ForceUpdateScreen(
+                title = route.title,
+                subtitle = route.subtitle,
+            )
         }
 
     }
