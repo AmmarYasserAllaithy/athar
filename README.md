@@ -1,6 +1,8 @@
 # Athar (أثر)
 
-Athar is a modern Android application designed for document and folder management. The name "Athar" (Arabic for "impact" or "trace") reflects the app's goal of helping users leave their mark through organized notes and documentation.
+Athar is a modern Android application designed for document and folder management. The name "
+Athar" (Arabic for "impact" or "trace") reflects the app's goal of helping users leave their mark
+through organized notes and documentation.
 
 ## Features
 
@@ -35,10 +37,10 @@ The project follows Clean Architecture principles:
 ## Getting Started
 
 1. Clone the repository.
-2. Open the project in Android Studio (Ladybug or newer recommended).
+2. Open the project in Android Studio.
 3. Sync Gradle and build the project.
 4. Run the app on an emulator or physical device (Min SDK: 28).
 
 ---
 
-Developed with ❤️ by Ammar Yasser.
+Developed with ❤️ by [Ammar Yasser](https://github.com/AmmarYasserAllaithy).
