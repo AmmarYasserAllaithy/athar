@@ -6,7 +6,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.ammaryasser.athar.presentation.screen.SplashScreen
+import androidx.navigation.toRoute
+import com.ammaryasser.athar.presentation.screen.forceupdate.ForceUpdateScreen
+import com.ammaryasser.athar.presentation.screen.splash.SplashScreen
 
 
 @Composable
@@ -21,13 +23,36 @@ fun AppNavHost(
     ) {
 
         composable<NavRoute.SplashRoute> {
-            SplashScreen {
-                navController.navigate(NavRoute.MainRoute) {
-                    popUpTo<NavRoute.SplashRoute> {
-                        inclusive = true
+            SplashScreen(
+                onNavToForceUpdate = { info ->
+                    navController.navigate(
+                        NavRoute.ForceUpdateRoute(
+                            title = info.forceUpdateTitle,
+                            subtitle = info.forceUpdateSubtitle,
+                        )
+                    ) {
+                        popUpTo<NavRoute.SplashRoute> {
+                            inclusive = true
+                        }
+                    }
+                },
+                onNavToMain = {
+                    navController.navigate(NavRoute.MainRoute) {
+                        popUpTo<NavRoute.SplashRoute> {
+                            inclusive = true
+                        }
                     }
                 }
-            }
+            )
+        }
+
+        composable<NavRoute.ForceUpdateRoute> { backStackEntry ->
+            val route = backStackEntry.toRoute<NavRoute.ForceUpdateRoute>()
+
+            ForceUpdateScreen(
+                title = route.title,
+                subtitle = route.subtitle,
+            )
         }
 
     }

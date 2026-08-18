@@ -7,7 +7,13 @@ import kotlinx.serialization.Serializable
 sealed interface NavRoute {
 
     @Serializable
-    object SplashRoute : NavRoute
+    data object SplashRoute : NavRoute
+
+    @Serializable
+    data class ForceUpdateRoute(
+        val title: String? = null,
+        val subtitle: String? = null,
+    ) : NavRoute
 
     @Serializable
     object MainRoute : NavRoute
