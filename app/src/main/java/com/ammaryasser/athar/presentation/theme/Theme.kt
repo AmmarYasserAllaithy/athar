@@ -8,6 +8,9 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import com.ammaryasser.athar.R
 
 
 private val LightColorScheme = lightColorScheme(
@@ -47,7 +50,7 @@ fun AtharTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        typography = Typography.applyDefaultFont(FontFamily(Font(R.font.ibm_plex_sans_arabic))),
         content = content,
     )
 }
