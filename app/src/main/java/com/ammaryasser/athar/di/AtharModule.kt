@@ -2,6 +2,7 @@ package com.ammaryasser.athar.di
 
 import com.ammaryasser.athar.BuildConfig
 import com.ammaryasser.athar.data.remote.VersionApiService
+import com.ammaryasser.athar.presentation.screen.splash.SplashViewModel
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.okhttp.OkHttp
 import io.ktor.client.plugins.DefaultRequest
@@ -17,6 +18,7 @@ import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonNamingStrategy
+import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.module
 
 
@@ -53,5 +55,8 @@ val atharModule = module {
         }
     }
     single { VersionApiService(client = get()) }
+
+    // ViewModels
+    viewModelOf(::SplashViewModel)
 
 }
