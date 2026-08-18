@@ -16,6 +16,6 @@ sealed interface NavRoute {
     ) : NavRoute
 
     @Serializable
-    object MainRoute : NavRoute
+    data object MainRoute : NavRoute
 
 }
