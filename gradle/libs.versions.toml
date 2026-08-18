@@ -11,6 +11,7 @@ kotlin-serialization = "1.11.0"
 kotlinx-coroutines = "1.11.0"
 navigation = "2.9.8"
 koin = "4.2.2"
+ktor = "3.5.2"
 
 
 [libraries]
@@ -38,6 +39,12 @@ koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compos
 androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+# Ktor
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
 
 
 [plugins]
