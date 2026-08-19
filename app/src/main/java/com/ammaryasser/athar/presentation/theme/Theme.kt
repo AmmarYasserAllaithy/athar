@@ -50,7 +50,7 @@ fun AtharTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography.applyDefaultFont(FontFamily(Font(R.font.ibm_plex_sans_arabic))),
+        typography = Typography.applyDefaultFont(FontFamily(Font(R.font.estedad_variable_font_weight))),
         content = content,
     )
 }
