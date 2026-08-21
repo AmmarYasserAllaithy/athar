@@ -3,6 +3,7 @@ package com.ammaryasser.athar.presentation.theme
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
@@ -13,21 +14,57 @@ import androidx.compose.ui.text.font.FontFamily
 import com.ammaryasser.athar.R
 
 
-private val LightColorScheme = lightColorScheme(
-    primary = DeepForestGreen,
-    secondary = SageGreen,
-    tertiary = Accent,
-    background = WarmIvory,
-    surface = Surface,
+val LightColorScheme = lightColorScheme(
+    primary = LightColors.ForestGreen,
+    onPrimary = LightColors.White,
+    primaryContainer = LightColors.PaleSage,
+    onPrimaryContainer = LightColors.DeepForest,
 
-    onBackground = TextPrimary,
-    onSurface = TextSecondary,
+    secondary = LightColors.WarmGold,
+    onSecondary = LightColors.DeepBrown,
+    secondaryContainer = LightColors.SoftGold,
+    onSecondaryContainer = LightColors.WarmBrown,
 
-    /* Other default colors to override
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    */
+    background = LightColors.WarmIvory,
+    onBackground = LightColors.CharcoalText,
+
+    surface = LightColors.PaperWhite,
+    onSurface = LightColors.CharcoalText,
+    surfaceVariant = LightColors.SoftWarmGray,
+    onSurfaceVariant = LightColors.MutedSageGray,
+
+    outline = LightColors.WarmBorder,
+    outlineVariant = LightColors.SubtleBorder,
+
+    error = LightColors.MutedTerracotta,
+    onError = LightColors.White,
+)
+
+
+val DarkColorScheme = darkColorScheme(
+    primary = DarkColors.SageGreen,
+    onPrimary = DarkColors.DeepMoss,
+    primaryContainer = DarkColors.DeepSage,
+    onPrimaryContainer = DarkColors.PaleSage,
+
+    secondary = DarkColors.WarmGold,
+    onSecondary = DarkColors.DeepBrown,
+    secondaryContainer = DarkColors.DarkGold,
+    onSecondaryContainer = DarkColors.SoftGold,
+
+    background = DarkColors.Charcoal,
+    onBackground = DarkColors.WarmWhite,
+
+    surface = DarkColors.SoftCharcoal,
+    onSurface = DarkColors.WarmWhite,
+    surfaceVariant = DarkColors.SlateCharcoal,
+    onSurfaceVariant = DarkColors.WarmGray,
+
+    outline = DarkColors.CharcoalBorder,
+    outlineVariant = DarkColors.SubtleBorder,
+
+    error = DarkColors.MutedTerracotta,
+    onError = DarkColors.DeepRed,
 )
 
 
@@ -44,7 +81,7 @@ fun AtharTheme(
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
-//        darkTheme -> DarkColorScheme
+        darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
 
