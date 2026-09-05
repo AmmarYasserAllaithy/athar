@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -17,6 +18,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import com.ammaryasser.athar.BuildConfig
 import com.ammaryasser.athar.R
 import com.ammaryasser.athar.domain.model.VersionModel
@@ -52,9 +54,10 @@ fun SplashScreen(
         Column(
             modifier = Modifier
                 .align(Alignment.Center)
+                .padding(bottom = Variables.Space300)
                 .fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(
-                Variables.Space400,
+                Variables.Space300,
                 Alignment.CenterVertically
             ),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -62,17 +65,20 @@ fun SplashScreen(
             Image(
                 painter = painterResource(R.drawable.athar_logo),
                 contentDescription = stringResource(R.string.app_name),
+                modifier = Modifier
+                    .padding(bottom = Variables.Space300)
+                    .size(128.dp)
             )
 
             Text(
                 text = stringResource(R.string.splash_message_line_1),
-                style = MaterialTheme.typography.titleLarge,
+                style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.Bold,
             )
 
             Text(
                 text = stringResource(R.string.splash_message_line_2),
-                style = MaterialTheme.typography.titleLarge,
+                style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.Bold,
             )
         }
